@@ -612,6 +612,7 @@ export abstract class TextField extends LitElement {
        ?readonly=${this.readOnly}
        ?required=${this.required}
        step=${(this.step || nothing) as unknown as number}
+       name=${this.name || nothing}
        type=${this.type}
        .value=${live(this.getInputValue())}
        @change=${this.redispatchEvent}
